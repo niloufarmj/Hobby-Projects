@@ -1,0 +1,15 @@
+D:\csharp\NoteApp\NoteApp\bin\Debug\netcoreapp3.1\NoteApp.exe
+D:\csharp\NoteApp\NoteApp\bin\Debug\netcoreapp3.1\NoteApp.deps.json
+D:\csharp\NoteApp\NoteApp\bin\Debug\netcoreapp3.1\NoteApp.runtimeconfig.json
+D:\csharp\NoteApp\NoteApp\bin\Debug\netcoreapp3.1\NoteApp.runtimeconfig.dev.json
+D:\csharp\NoteApp\NoteApp\bin\Debug\netcoreapp3.1\NoteApp.dll
+D:\csharp\NoteApp\NoteApp\bin\Debug\netcoreapp3.1\NoteApp.pdb
+D:\csharp\NoteApp\NoteApp\obj\Debug\netcoreapp3.1\NoteApp.csprojAssemblyReference.cache
+D:\csharp\NoteApp\NoteApp\obj\Debug\netcoreapp3.1\NoteApp.Form1.resources
+D:\csharp\NoteApp\NoteApp\obj\Debug\netcoreapp3.1\NoteApp.csproj.GenerateResource.cache
+D:\csharp\NoteApp\NoteApp\obj\Debug\netcoreapp3.1\NoteApp.AssemblyInfoInputs.cache
+D:\csharp\NoteApp\NoteApp\obj\Debug\netcoreapp3.1\NoteApp.AssemblyInfo.cs
+D:\csharp\NoteApp\NoteApp\obj\Debug\netcoreapp3.1\NoteApp.csproj.CoreCompileInputs.cache
+D:\csharp\NoteApp\NoteApp\obj\Debug\netcoreapp3.1\NoteApp.dll
+D:\csharp\NoteApp\NoteApp\obj\Debug\netcoreapp3.1\NoteApp.pdb
+D:\csharp\NoteApp\NoteApp\obj\Debug\netcoreapp3.1\NoteApp.genruntimeconfig.cache
