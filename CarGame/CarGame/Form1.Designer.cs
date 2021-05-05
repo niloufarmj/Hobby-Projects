@@ -51,6 +51,8 @@ namespace CarGame
             this.line9 = new System.Windows.Forms.PictureBox();
             this.line10 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.coin_label = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.closePic = new System.Windows.Forms.PictureBox();
             this.carPic = new System.Windows.Forms.PictureBox();
             this.coin5 = new System.Windows.Forms.PictureBox();
@@ -64,8 +66,6 @@ namespace CarGame
             this.background = new System.Windows.Forms.PictureBox();
             this.gameOverPic = new System.Windows.Forms.PictureBox();
             this.gameOverLabel = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.obs1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.obs2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.obs3)).BeginInit();
@@ -107,9 +107,9 @@ namespace CarGame
             // obs1
             // 
             this.obs1.Image = ((System.Drawing.Image)(resources.GetObject("obs1.Image")));
-            this.obs1.Location = new System.Drawing.Point(37, 68);
+            this.obs1.Location = new System.Drawing.Point(37, 86);
             this.obs1.Name = "obs1";
-            this.obs1.Size = new System.Drawing.Size(63, 65);
+            this.obs1.Size = new System.Drawing.Size(63, 47);
             this.obs1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.obs1.TabIndex = 3;
             this.obs1.TabStop = false;
@@ -117,9 +117,9 @@ namespace CarGame
             // obs2
             // 
             this.obs2.Image = ((System.Drawing.Image)(resources.GetObject("obs2.Image")));
-            this.obs2.Location = new System.Drawing.Point(131, 68);
+            this.obs2.Location = new System.Drawing.Point(131, 86);
             this.obs2.Name = "obs2";
-            this.obs2.Size = new System.Drawing.Size(65, 66);
+            this.obs2.Size = new System.Drawing.Size(65, 48);
             this.obs2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.obs2.TabIndex = 4;
             this.obs2.TabStop = false;
@@ -127,9 +127,9 @@ namespace CarGame
             // obs3
             // 
             this.obs3.Image = ((System.Drawing.Image)(resources.GetObject("obs3.Image")));
-            this.obs3.Location = new System.Drawing.Point(231, 69);
+            this.obs3.Location = new System.Drawing.Point(231, 86);
             this.obs3.Name = "obs3";
-            this.obs3.Size = new System.Drawing.Size(65, 67);
+            this.obs3.Size = new System.Drawing.Size(65, 50);
             this.obs3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.obs3.TabIndex = 5;
             this.obs3.TabStop = false;
@@ -137,9 +137,9 @@ namespace CarGame
             // obs4
             // 
             this.obs4.Image = ((System.Drawing.Image)(resources.GetObject("obs4.Image")));
-            this.obs4.Location = new System.Drawing.Point(324, 69);
+            this.obs4.Location = new System.Drawing.Point(324, 86);
             this.obs4.Name = "obs4";
-            this.obs4.Size = new System.Drawing.Size(65, 67);
+            this.obs4.Size = new System.Drawing.Size(65, 50);
             this.obs4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.obs4.TabIndex = 6;
             this.obs4.TabStop = false;
@@ -147,9 +147,9 @@ namespace CarGame
             // obs6
             // 
             this.obs6.Image = ((System.Drawing.Image)(resources.GetObject("obs6.Image")));
-            this.obs6.Location = new System.Drawing.Point(129, 168);
+            this.obs6.Location = new System.Drawing.Point(129, 185);
             this.obs6.Name = "obs6";
-            this.obs6.Size = new System.Drawing.Size(63, 65);
+            this.obs6.Size = new System.Drawing.Size(63, 48);
             this.obs6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.obs6.TabIndex = 7;
             this.obs6.TabStop = false;
@@ -157,9 +157,9 @@ namespace CarGame
             // obs5
             // 
             this.obs5.Image = ((System.Drawing.Image)(resources.GetObject("obs5.Image")));
-            this.obs5.Location = new System.Drawing.Point(33, 169);
+            this.obs5.Location = new System.Drawing.Point(33, 185);
             this.obs5.Name = "obs5";
-            this.obs5.Size = new System.Drawing.Size(63, 65);
+            this.obs5.Size = new System.Drawing.Size(63, 49);
             this.obs5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.obs5.TabIndex = 8;
             this.obs5.TabStop = false;
@@ -167,9 +167,9 @@ namespace CarGame
             // obs7
             // 
             this.obs7.Image = ((System.Drawing.Image)(resources.GetObject("obs7.Image")));
-            this.obs7.Location = new System.Drawing.Point(229, 168);
+            this.obs7.Location = new System.Drawing.Point(231, 185);
             this.obs7.Name = "obs7";
-            this.obs7.Size = new System.Drawing.Size(63, 65);
+            this.obs7.Size = new System.Drawing.Size(63, 48);
             this.obs7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.obs7.TabIndex = 9;
             this.obs7.TabStop = false;
@@ -177,9 +177,9 @@ namespace CarGame
             // obs8
             // 
             this.obs8.Image = ((System.Drawing.Image)(resources.GetObject("obs8.Image")));
-            this.obs8.Location = new System.Drawing.Point(322, 168);
+            this.obs8.Location = new System.Drawing.Point(326, 186);
             this.obs8.Name = "obs8";
-            this.obs8.Size = new System.Drawing.Size(63, 65);
+            this.obs8.Size = new System.Drawing.Size(63, 48);
             this.obs8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.obs8.TabIndex = 10;
             this.obs8.TabStop = false;
@@ -277,13 +277,35 @@ namespace CarGame
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.coin_label);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.closePic);
             this.panel1.Location = new System.Drawing.Point(-2, -5);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(431, 37);
             this.panel1.TabIndex = 22;
+            // 
+            // coin_label
+            // 
+            this.coin_label.AutoSize = true;
+            this.coin_label.Font = new System.Drawing.Font("Cooper Black", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.coin_label.ForeColor = System.Drawing.Color.Gold;
+            this.coin_label.Location = new System.Drawing.Point(92, 5);
+            this.coin_label.Name = "coin_label";
+            this.coin_label.Size = new System.Drawing.Size(26, 26);
+            this.coin_label.TabIndex = 3;
+            this.coin_label.Text = "0";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Cooper Black", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.Color.Gold;
+            this.label1.Location = new System.Drawing.Point(14, 5);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(72, 26);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "coins";
             // 
             // closePic
             // 
@@ -299,9 +321,9 @@ namespace CarGame
             // carPic
             // 
             this.carPic.Image = ((System.Drawing.Image)(resources.GetObject("carPic.Image")));
-            this.carPic.Location = new System.Drawing.Point(180, 540);
+            this.carPic.Location = new System.Drawing.Point(186, 553);
             this.carPic.Name = "carPic";
-            this.carPic.Size = new System.Drawing.Size(67, 112);
+            this.carPic.Size = new System.Drawing.Size(57, 99);
             this.carPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.carPic.TabIndex = 23;
             this.carPic.TabStop = false;
@@ -399,7 +421,7 @@ namespace CarGame
             // gameOverPic
             // 
             this.gameOverPic.BackColor = System.Drawing.SystemColors.ControlText;
-            this.gameOverPic.Location = new System.Drawing.Point(59, 279);
+            this.gameOverPic.Location = new System.Drawing.Point(65, 285);
             this.gameOverPic.Name = "gameOverPic";
             this.gameOverPic.Size = new System.Drawing.Size(313, 132);
             this.gameOverPic.TabIndex = 6;
@@ -416,28 +438,6 @@ namespace CarGame
             this.gameOverLabel.Size = new System.Drawing.Size(289, 59);
             this.gameOverLabel.TabIndex = 6;
             this.gameOverLabel.Text = "GAME OVER";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Cooper Black", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.Color.Gold;
-            this.label1.Location = new System.Drawing.Point(14, 5);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(72, 26);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "coins";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Cooper Black", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.ForeColor = System.Drawing.Color.Gold;
-            this.label2.Location = new System.Drawing.Point(92, 5);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(26, 26);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "0";
             // 
             // Form1
             // 
@@ -552,7 +552,7 @@ namespace CarGame
         private System.Windows.Forms.PictureBox background;
         private System.Windows.Forms.PictureBox gameOverPic;
         private System.Windows.Forms.Label gameOverLabel;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label coin_label;
         private System.Windows.Forms.Label label1;
     }
 }

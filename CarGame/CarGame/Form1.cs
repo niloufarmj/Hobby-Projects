@@ -13,24 +13,31 @@ namespace CarGame
     public partial class Form1 : Form
     {
 
-        int loc1, loc2, loc3, loc4, loc5, loc6, loc7, loc8;
-        int coin_loc1, coin_loc2, coin_loc3, coin_loc4, coin_loc5, coin_loc6, coin_loc7, coin_loc8;
-        int coin_num;
+        int loc1, loc2, loc3, loc4, loc5, loc6, loc7, loc8; //obstacle locations
+        int coin_loc1, coin_loc2, coin_loc3, coin_loc4, coin_loc5, coin_loc6, coin_loc7, coin_loc8; //coin locations
+        int coin_num = 0; //number of gathered coins
 
-        int gameSpeed = 5;
+        //this variable controls game speed
+        //as you gain more coins the speed game will raise so the game gets harder
+        int ctr = 0; 
+
+        int gameSpeed = 7;
         Random r = new Random();
 
+        //function to move car
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
+
+            //on left or right key of the keyboead the car would move in respect to game speed
             if (e.KeyCode == Keys.Left)
             {
                 if (carPic.Left > 0)
-                    carPic.Left -= gameSpeed;
+                    carPic.Left -= (gameSpeed + gameSpeed / 3);
             }
             else if (e.KeyCode == Keys.Right)
             {
                 if (carPic.Right < 425)
-                    carPic.Left += gameSpeed;
+                    carPic.Left += (gameSpeed + gameSpeed / 3);
             }
             
         }
@@ -39,27 +46,97 @@ namespace CarGame
         {
             InitializeComponent();
         }
-
+        
+        //this function will control time to move objects
         private void timer1_Tick(object sender, EventArgs e)
         {
             moveBackGround(gameSpeed);
-            moveObs(gameSpeed * 2);
-            moveCoins(gameSpeed * 2);
+            moveObs(gameSpeed);
+            moveCoins(gameSpeed);
+            
 
-
-            if (carPic.Bounds.IntersectsWith(coin1.Bounds) || carPic.Bounds.IntersectsWith(coin5.Bounds) ||
-                carPic.Bounds.IntersectsWith(coin2.Bounds) || carPic.Bounds.IntersectsWith(coin6.Bounds) ||
-                carPic.Bounds.IntersectsWith(coin3.Bounds) || carPic.Bounds.IntersectsWith(coin7.Bounds) ||
-                carPic.Bounds.IntersectsWith(coin4.Bounds) || carPic.Bounds.IntersectsWith(coin8.Bounds))
+            if (carPic.Bounds.IntersectsWith(coin1.Bounds))
             {
-                //gameOverPic.Visible = true;
-                //gameOverLabel.Visible = true;
-                //gameSpeed = 0;
+                coin_num++;
+                coin_label.Text = coin_num.ToString();
+                coin1.Top = 871;
+                ctr++;
             }
-            /*else if(true) {
-                //coins.Text = "1";
-            }*/
-                
+
+            if (carPic.Bounds.IntersectsWith(coin2.Bounds))
+            {
+                coin_num++;
+                coin_label.Text = coin_num.ToString();
+                coin2.Top = 871;
+                ctr++;
+            }
+
+            if (carPic.Bounds.IntersectsWith(coin3.Bounds))
+            {
+                coin_num++;
+                coin_label.Text = coin_num.ToString();
+                coin3.Top = 871;
+                ctr++;
+            }
+
+            if (carPic.Bounds.IntersectsWith(coin4.Bounds))
+            {
+                coin_num++;
+                coin_label.Text = coin_num.ToString();
+                coin4.Top = 871;
+                ctr++;
+            }
+
+            if (carPic.Bounds.IntersectsWith(coin5.Bounds))
+            {
+                coin_num++;
+                coin_label.Text = coin_num.ToString();
+                coin5.Top = 871;
+                ctr++;
+            }
+
+            if (carPic.Bounds.IntersectsWith(coin6.Bounds))
+            {
+                coin_num++;
+                coin_label.Text = coin_num.ToString();
+                coin6.Top = 871;
+                ctr++;
+            }
+
+            if (carPic.Bounds.IntersectsWith(coin7.Bounds))
+            {
+                coin_num++;
+                coin_label.Text = coin_num.ToString();
+                coin7.Top = 871;
+                ctr++;
+            }
+
+            if (carPic.Bounds.IntersectsWith(coin8.Bounds))
+            {
+                coin_num++;
+                coin_label.Text = coin_num.ToString();
+                coin8.Top = 871;
+                ctr++;
+            }
+
+            if (ctr == 5)
+            {
+                gameSpeed++;
+                ctr = 0;
+            }
+
+
+            if (carPic.Bounds.IntersectsWith(obs1.Bounds) || carPic.Bounds.IntersectsWith(obs5.Bounds) ||
+                carPic.Bounds.IntersectsWith(obs2.Bounds) || carPic.Bounds.IntersectsWith(obs6.Bounds) ||
+                carPic.Bounds.IntersectsWith(obs3.Bounds) || carPic.Bounds.IntersectsWith(obs7.Bounds) ||
+                carPic.Bounds.IntersectsWith(obs4.Bounds) || carPic.Bounds.IntersectsWith(obs8.Bounds))
+            {
+                gameOverPic.Visible = true;
+                gameOverLabel.Visible = true;
+                gameSpeed = 0;
+            }
+            
+
         }
 
         void moveBackGround(int speed)
@@ -143,7 +220,7 @@ namespace CarGame
             loc6 = r.Next(-250, -100);
             loc7 = r.Next(-1300, -1100);
             loc8 = r.Next(-250, -100);
-            if (obs1.Top >= 700)
+            if (obs1.Top >= 870)
             {
                 /*while (Math.Abs(loc1 - loc2) < 200 || Math.Abs(loc1 - loc5) < 200 || Math.Abs(loc1 - loc6) < 200)
                     loc1 = r.Next(-600, -100);*/
@@ -158,7 +235,7 @@ namespace CarGame
             else
                 obs1.Top += speed;
 
-            if (obs2.Top >= 800)
+            if (obs2.Top >= 870)
             {
                 /*while (Math.Abs(loc2 - loc1) < 200 || Math.Abs(loc2 - loc5) < 200 || Math.Abs(loc2 - loc6) < 200 || Math.Abs(loc2 - loc7) < 200 || Math.Abs(loc2 - loc3) < 200)
                     loc2 = r.Next(-600, -100);
@@ -176,7 +253,7 @@ namespace CarGame
             else
                 obs2.Top += speed;
 
-            if (obs3.Top >= 800)
+            if (obs3.Top >= 870)
             {
                 /*while (Math.Abs(loc3 - loc2) < 200 || Math.Abs(loc3 - loc7) < 200 || Math.Abs(loc3 - loc6) < 200 || Math.Abs(loc3 - loc4) < 200 || Math.Abs(loc3 - loc8) < 200)
                     loc3 = r.Next(-600, -100);
@@ -194,7 +271,7 @@ namespace CarGame
             else
                 obs3.Top += speed;
 
-            if (obs4.Top > 800)
+            if (obs4.Top > 870)
             {
                 /*while (Math.Abs(loc4 - loc3) < 200 || Math.Abs(loc4 - loc7) < 200 || Math.Abs(loc4 - loc8) < 200)
                     loc4 = r.Next(-600, -100);*/
@@ -209,7 +286,7 @@ namespace CarGame
             else
                 obs4.Top += speed;
 
-            if (obs5.Top > 800)
+            if (obs5.Top > 870)
             {
                 /*while (Math.Abs(loc5 - loc1) < 200 || Math.Abs(loc5 - loc2) < 200 || Math.Abs(loc5 - loc6) < 200)
                     loc5 = r.Next(-600, -100);*/
@@ -224,7 +301,7 @@ namespace CarGame
             else
                 obs5.Top += speed;
 
-            if (obs6.Top > 800)
+            if (obs6.Top > 870)
             {
                 /*while (Math.Abs(loc6 - loc5) < 200 || Math.Abs(loc6 - loc1) < 200 || Math.Abs(loc6 - loc2) < 200 || Math.Abs(loc6 - loc3) < 200 || Math.Abs(loc6 - loc7) < 200)
                     loc6 = r.Next(-600, -100);*/
@@ -243,7 +320,7 @@ namespace CarGame
             else
                 obs6.Top += speed;
 
-            if (obs7.Top > 800)
+            if (obs7.Top > 870)
             {
                 /*while (Math.Abs(loc7 - loc2) < 200 || Math.Abs(loc7 - loc6) < 200 || Math.Abs(loc7 - loc3) < 200 || Math.Abs(loc7 - loc4) < 200 || Math.Abs(loc7 - loc8) < 200)
                     loc7 = r.Next(-600, -100);*/
@@ -262,7 +339,7 @@ namespace CarGame
             else
                 obs7.Top += speed;
 
-            if (obs8.Top > 800)
+            if (obs8.Top > 870)
             {
                 /*while (Math.Abs(loc8 - loc3) < 200 || Math.Abs(loc8 - loc4) < 200 || Math.Abs(loc8 - loc7) < 200)
                     loc8 = r.Next(-600, -100);*/
@@ -289,7 +366,7 @@ namespace CarGame
             coin_loc7 = r.Next(-1000, -900);
             coin_loc8 = r.Next(-250, -100);
 
-            if (coin1.Top >= 700)
+            if (coin1.Top >= 870)
             {
 
                 coin1.Top = coin_loc1;
@@ -297,14 +374,14 @@ namespace CarGame
             else
                 coin1.Top += speed;
 
-            if (coin2.Top >= 800)
+            if (coin2.Top >= 870)
             {
                 coin2.Top = coin_loc2;
             }
             else
                 coin2.Top += speed;
 
-            if (coin3.Top >= 800)
+            if (coin3.Top >= 870)
             {
 
                 coin3.Top = coin_loc3;
@@ -312,7 +389,7 @@ namespace CarGame
             else
                 coin3.Top += speed;
 
-            if (coin4.Top > 800)
+            if (coin4.Top > 870)
             {
 
                 coin4.Top = coin_loc4;
@@ -320,7 +397,7 @@ namespace CarGame
             else
                 coin4.Top += speed;
 
-            if (coin5.Top > 800)
+            if (coin5.Top > 870)
             {
 
                 coin5.Top = coin_loc5;
@@ -328,7 +405,7 @@ namespace CarGame
             else
                 coin5.Top += speed;
 
-            if (coin6.Top > 800)
+            if (coin6.Top > 870)
             {
 
                 coin6.Top = coin_loc6;
@@ -336,7 +413,7 @@ namespace CarGame
             else
                 coin6.Top += speed;
 
-            if (coin7.Top > 800)
+            if (coin7.Top > 870)
             {
 
                 coin7.Top = coin_loc7;
@@ -344,7 +421,7 @@ namespace CarGame
             else
                 coin7.Top += speed;
 
-            if (coin8.Top > 800)
+            if (coin8.Top > 870)
             {
 
                 coin8.Top = coin_loc8;
@@ -468,7 +545,7 @@ namespace CarGame
 
             line9.Top = 100;
             line10.Top = 100;
-            carPic.Top = 650;
+            carPic.Top = 720;
         }
     }
 }
