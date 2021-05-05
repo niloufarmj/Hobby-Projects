@@ -310,7 +310,7 @@ namespace CarGame
             // closePic
             // 
             this.closePic.Image = ((System.Drawing.Image)(resources.GetObject("closePic.Image")));
-            this.closePic.Location = new System.Drawing.Point(388, 0);
+            this.closePic.Location = new System.Drawing.Point(386, 6);
             this.closePic.Name = "closePic";
             this.closePic.Size = new System.Drawing.Size(30, 31);
             this.closePic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

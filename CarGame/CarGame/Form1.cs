@@ -54,7 +54,8 @@ namespace CarGame
             moveObs(gameSpeed);
             moveCoins(gameSpeed);
             
-
+            //check intersection with coins
+            //with the intersction number of gained coins will raise and the coin would dispappear
             if (carPic.Bounds.IntersectsWith(coin1.Bounds))
             {
                 coin_num++;
@@ -119,13 +120,14 @@ namespace CarGame
                 ctr++;
             }
 
-            if (ctr == 5)
+            if (ctr == 5) //check game speed if needed to raise
             {
                 gameSpeed++;
                 ctr = 0;
             }
 
-
+            //check intersection with osbstacles 
+            //if the car overlaps the obstacles the game overs
             if (carPic.Bounds.IntersectsWith(obs1.Bounds) || carPic.Bounds.IntersectsWith(obs5.Bounds) ||
                 carPic.Bounds.IntersectsWith(obs2.Bounds) || carPic.Bounds.IntersectsWith(obs6.Bounds) ||
                 carPic.Bounds.IntersectsWith(obs3.Bounds) || carPic.Bounds.IntersectsWith(obs7.Bounds) ||
@@ -139,6 +141,8 @@ namespace CarGame
 
         }
 
+        //function to move lines so that it looks like the background is moving
+        //when the lines reach the end of the app frame they will again appear in top
         void moveBackGround(int speed)
         {
            
@@ -210,6 +214,7 @@ namespace CarGame
 
         }
 
+        //function to move obstacles like lines
         void moveObs(int speed)
         {
             loc1 = r.Next(-850, -750);
@@ -355,6 +360,7 @@ namespace CarGame
                 obs8.Top += speed;
         }
 
+        //function to move coins
         void moveCoins(int speed)
         {
             coin_loc1 = r.Next(-850, -650);
@@ -430,6 +436,7 @@ namespace CarGame
                 coin8.Top += speed;
         }
 
+        //click on close icon will close the window
         private void close(object sender, EventArgs e)
         {
             this.Close();
@@ -494,6 +501,7 @@ namespace CarGame
             gameOverLabel.Visible = false;
         }
 
+        //initialize items' locations on form
         public void init_locations()
         {
             
