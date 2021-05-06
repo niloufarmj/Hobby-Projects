@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Media;
 
 namespace CarGame
 {
@@ -15,6 +16,28 @@ namespace CarGame
 
         int loc1, loc2, loc3, loc4, loc5, loc6, loc7, loc8; //obstacle locations
         int coin_loc1, coin_loc2, coin_loc3, coin_loc4, coin_loc5, coin_loc6, coin_loc7, coin_loc8; //coin locations
+        int high_score = 0;
+        int temp_speed;
+
+        
+        SoundPlayer coin_sound = new SoundPlayer(@"d:\csharp\CarGame\assets\coin.wav");
+        SoundPlayer game_over_sound = new SoundPlayer(@"d:\csharp\CarGame\assets\game_over2.wav");
+
+        private void pause_Click(object sender, EventArgs e)
+        {
+            temp_speed = gameSpeed;
+            gameSpeed = 0;
+            pause.Visible = false;
+            play.Visible = true;
+        }
+
+        private void play_Click(object sender, EventArgs e)
+        {
+            gameSpeed = temp_speed;
+            pause.Visible = true;
+            play.Visible = false;
+        }
+
         int coin_num = 0; //number of gathered coins
 
         //this variable controls game speed
@@ -42,6 +65,24 @@ namespace CarGame
             
         }
 
+        private void retry_Click(object sender, EventArgs e)
+        {
+            
+            coin_num = 0;
+            coin_label.Text = coin_num.ToString();
+            gameSpeed = 7;
+            line8.Top = 57;
+            line4.Top = 57;
+            line3.Top = 216;
+            line7.Top = 216;
+            line2.Top = 375;
+            line6.Top = 375;
+            line1.Top = 534;
+            line5.Top = 534;
+            carPic.Left = 186;
+            Form1_Load(sender, e);
+        }
+
         public Form1()
         {
             InitializeComponent();
@@ -62,6 +103,7 @@ namespace CarGame
                 coin_label.Text = coin_num.ToString();
                 coin1.Top = 871;
                 ctr++;
+                coin_sound.Play();
             }
 
             if (carPic.Bounds.IntersectsWith(coin2.Bounds))
@@ -70,6 +112,7 @@ namespace CarGame
                 coin_label.Text = coin_num.ToString();
                 coin2.Top = 871;
                 ctr++;
+                coin_sound.Play();
             }
 
             if (carPic.Bounds.IntersectsWith(coin3.Bounds))
@@ -78,6 +121,7 @@ namespace CarGame
                 coin_label.Text = coin_num.ToString();
                 coin3.Top = 871;
                 ctr++;
+                coin_sound.Play();
             }
 
             if (carPic.Bounds.IntersectsWith(coin4.Bounds))
@@ -86,6 +130,7 @@ namespace CarGame
                 coin_label.Text = coin_num.ToString();
                 coin4.Top = 871;
                 ctr++;
+                coin_sound.Play();
             }
 
             if (carPic.Bounds.IntersectsWith(coin5.Bounds))
@@ -94,6 +139,7 @@ namespace CarGame
                 coin_label.Text = coin_num.ToString();
                 coin5.Top = 871;
                 ctr++;
+                coin_sound.Play();
             }
 
             if (carPic.Bounds.IntersectsWith(coin6.Bounds))
@@ -102,6 +148,7 @@ namespace CarGame
                 coin_label.Text = coin_num.ToString();
                 coin6.Top = 871;
                 ctr++;
+                coin_sound.Play();
             }
 
             if (carPic.Bounds.IntersectsWith(coin7.Bounds))
@@ -110,6 +157,7 @@ namespace CarGame
                 coin_label.Text = coin_num.ToString();
                 coin7.Top = 871;
                 ctr++;
+                coin_sound.Play();
             }
 
             if (carPic.Bounds.IntersectsWith(coin8.Bounds))
@@ -118,6 +166,7 @@ namespace CarGame
                 coin_label.Text = coin_num.ToString();
                 coin8.Top = 871;
                 ctr++;
+                coin_sound.Play();
             }
 
             if (ctr == 5) //check game speed if needed to raise
@@ -133,9 +182,18 @@ namespace CarGame
                 carPic.Bounds.IntersectsWith(obs3.Bounds) || carPic.Bounds.IntersectsWith(obs7.Bounds) ||
                 carPic.Bounds.IntersectsWith(obs4.Bounds) || carPic.Bounds.IntersectsWith(obs8.Bounds))
             {
+                
+                game_over_sound.Play();
                 gameOverPic.Visible = true;
                 gameOverLabel.Visible = true;
+                retry.Visible = true;
+                high_num_label.Visible = true;
+                h_s_label.Visible = true;
                 gameSpeed = 0;
+                if (high_score < coin_num)
+                    high_score = coin_num;
+                high_num_label.Text = high_score.ToString();
+
             }
             
 
@@ -499,6 +557,10 @@ namespace CarGame
 
             gameOverPic.Visible = false;
             gameOverLabel.Visible = false;
+            retry.Visible = false;
+            high_num_label.Visible = false;
+            h_s_label.Visible = false;
+            play.Visible = false;
         }
 
         //initialize items' locations on form

@@ -66,6 +66,11 @@ namespace CarGame
             this.background = new System.Windows.Forms.PictureBox();
             this.gameOverPic = new System.Windows.Forms.PictureBox();
             this.gameOverLabel = new System.Windows.Forms.Label();
+            this.h_s_label = new System.Windows.Forms.Label();
+            this.high_num_label = new System.Windows.Forms.Label();
+            this.retry = new System.Windows.Forms.PictureBox();
+            this.pause = new System.Windows.Forms.PictureBox();
+            this.play = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.obs1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.obs2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.obs3)).BeginInit();
@@ -97,6 +102,9 @@ namespace CarGame
             ((System.ComponentModel.ISupportInitialize)(this.coin4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.background)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gameOverPic)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.retry)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pause)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.play)).BeginInit();
             this.SuspendLayout();
             // 
             // timer1
@@ -277,12 +285,14 @@ namespace CarGame
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel1.Controls.Add(this.play);
+            this.panel1.Controls.Add(this.pause);
             this.panel1.Controls.Add(this.coin_label);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.closePic);
             this.panel1.Location = new System.Drawing.Point(-2, -5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(431, 37);
+            this.panel1.Size = new System.Drawing.Size(431, 43);
             this.panel1.TabIndex = 22;
             // 
             // coin_label
@@ -421,9 +431,9 @@ namespace CarGame
             // gameOverPic
             // 
             this.gameOverPic.BackColor = System.Drawing.SystemColors.ControlText;
-            this.gameOverPic.Location = new System.Drawing.Point(65, 285);
+            this.gameOverPic.Location = new System.Drawing.Point(65, 239);
             this.gameOverPic.Name = "gameOverPic";
-            this.gameOverPic.Size = new System.Drawing.Size(313, 132);
+            this.gameOverPic.Size = new System.Drawing.Size(313, 229);
             this.gameOverPic.TabIndex = 6;
             this.gameOverPic.TabStop = false;
             // 
@@ -433,17 +443,78 @@ namespace CarGame
             this.gameOverLabel.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.gameOverLabel.Font = new System.Drawing.Font("Showcard Gothic", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.gameOverLabel.ForeColor = System.Drawing.Color.Red;
-            this.gameOverLabel.Location = new System.Drawing.Point(73, 315);
+            this.gameOverLabel.Location = new System.Drawing.Point(76, 315);
             this.gameOverLabel.Name = "gameOverLabel";
             this.gameOverLabel.Size = new System.Drawing.Size(289, 59);
             this.gameOverLabel.TabIndex = 6;
             this.gameOverLabel.Text = "GAME OVER";
+            // 
+            // h_s_label
+            // 
+            this.h_s_label.AutoSize = true;
+            this.h_s_label.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.h_s_label.Font = new System.Drawing.Font("Cooper Black", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.h_s_label.ForeColor = System.Drawing.Color.Gold;
+            this.h_s_label.Location = new System.Drawing.Point(107, 279);
+            this.h_s_label.Name = "h_s_label";
+            this.h_s_label.Size = new System.Drawing.Size(172, 26);
+            this.h_s_label.TabIndex = 4;
+            this.h_s_label.Text = "Highest Score";
+            // 
+            // high_num_label
+            // 
+            this.high_num_label.AutoSize = true;
+            this.high_num_label.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.high_num_label.Font = new System.Drawing.Font("Cooper Black", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.high_num_label.ForeColor = System.Drawing.Color.Gold;
+            this.high_num_label.Location = new System.Drawing.Point(285, 270);
+            this.high_num_label.Name = "high_num_label";
+            this.high_num_label.Size = new System.Drawing.Size(37, 38);
+            this.high_num_label.TabIndex = 4;
+            this.high_num_label.Text = "0";
+            // 
+            // retry
+            // 
+            this.retry.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.retry.Image = ((System.Drawing.Image)(resources.GetObject("retry.Image")));
+            this.retry.Location = new System.Drawing.Point(176, 387);
+            this.retry.Name = "retry";
+            this.retry.Size = new System.Drawing.Size(79, 57);
+            this.retry.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.retry.TabIndex = 31;
+            this.retry.TabStop = false;
+            this.retry.Click += new System.EventHandler(this.retry_Click);
+            // 
+            // pause
+            // 
+            this.pause.Image = ((System.Drawing.Image)(resources.GetObject("pause.Image")));
+            this.pause.Location = new System.Drawing.Point(346, 6);
+            this.pause.Name = "pause";
+            this.pause.Size = new System.Drawing.Size(31, 31);
+            this.pause.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pause.TabIndex = 4;
+            this.pause.TabStop = false;
+            this.pause.Click += new System.EventHandler(this.pause_Click);
+            // 
+            // play
+            // 
+            this.play.Image = ((System.Drawing.Image)(resources.GetObject("play.Image")));
+            this.play.Location = new System.Drawing.Point(346, 6);
+            this.play.Name = "play";
+            this.play.Size = new System.Drawing.Size(31, 31);
+            this.play.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.play.TabIndex = 5;
+            this.play.TabStop = false;
+            this.play.Click += new System.EventHandler(this.play_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(426, 664);
+            this.Controls.Add(this.retry);
+            this.Controls.Add(this.high_num_label);
+            this.Controls.Add(this.h_s_label);
             this.Controls.Add(this.gameOverLabel);
             this.Controls.Add(this.gameOverPic);
             this.Controls.Add(this.coin4);
@@ -513,6 +584,9 @@ namespace CarGame
             ((System.ComponentModel.ISupportInitialize)(this.coin4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.background)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gameOverPic)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.retry)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pause)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.play)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -554,6 +628,11 @@ namespace CarGame
         private System.Windows.Forms.Label gameOverLabel;
         private System.Windows.Forms.Label coin_label;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label h_s_label;
+        private System.Windows.Forms.Label high_num_label;
+        private System.Windows.Forms.PictureBox retry;
+        private System.Windows.Forms.PictureBox pause;
+        private System.Windows.Forms.PictureBox play;
     }
 }
 
