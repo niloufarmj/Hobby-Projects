@@ -4,6 +4,8 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 
+import java.util.ArrayList;
+import java.util.Scanner;
 import java.util.Stack;
 
 public class CalculationController {
@@ -15,21 +17,6 @@ public class CalculationController {
         answer_label.setVisible(true);
     }
 
-
-    String findAndReplaceAll(String data, String toSearch, String replaceStr)
-    {
-        // Get the first occurrence
-        size_t pos = data.find(toSearch);
-        // Repeat till end is reached
-        while( pos != string::npos)
-        {
-
-            data.replace(pos, toSearch.size(), replaceStr);
-
-            pos =data.find(toSearch, pos + replaceStr.size());
-        }
-        return data;
-    }
 
     int precedence(char op){
         if (op == '+'||op == '-')
@@ -43,26 +30,30 @@ public class CalculationController {
         return 4;
     }
 
-    int precedence(string op){
-        if (op == "+"||op == "-")
+    int precedence(String op){
+        if (op.equals("+") ||op.equals("-"))
             return 1;
-        if (op == "*"||op == "/")
+        if (op.equals("*") ||op.equals("/"))
             return 2;
-        if (op == "^")
+        if (op.equals("^"))
             return 3;
-        if (op == "(")
+        if (op.equals("("))
             return 0;
         return 4;
     }
 
-    int applyOp(int a, int b, char op){
+    int applyOp(int a, int b, Character op){
         switch(op){
             case '+': return a + b;
             case '-': return a - b;
             case '*': return a * b;
             case '/': return a / b;
-            case '^': return pow(a , b);
+            case '^':
+                double a_d = a;
+                double b_d = b;
+                return (int)(Math.pow(a_d , b_d));
         }
+        return  0;
     }
 
     int evaluateSimple(String tokens){
@@ -75,17 +66,16 @@ public class CalculationController {
         for (i = 0; i < tokens.length(); i++){
 
 
-            if(tokens[i] == '('){
-                ops.push(tokens[i]);
+            if(tokens.charAt(i) == '('){
+                ops.push(tokens.charAt(i));
             }
 
-            else if(isdigit(tokens[i])){
+            else if(Character.isDigit(tokens.charAt(i))){
                 int val = 0;
 
-                while(i < tokens.length() &&
-                        isdigit(tokens[i]))
+                while(i < tokens.length() && Character.isDigit(tokens.charAt(i)))
                 {
-                    val = (val*10) + (tokens[i]-'0');
+                    val = (val*10) + (tokens.charAt(i)-'0');
                     i++;
                 }
 
@@ -94,17 +84,17 @@ public class CalculationController {
                 i--;
             }
 
-            else if(tokens[i] == ')')
+            else if(tokens.charAt(i) == ')')
             {
-                while(!ops.empty() && ops.top() != '(')
+                while(!ops.empty() && ops.peek() != '(')
                 {
-                    int val2 = values.top();
+                    int val2 = values.peek();
                     values.pop();
 
-                    int val1 = values.top();
+                    int val1 = values.peek();
                     values.pop();
 
-                    char op = ops.top();
+                    char op = ops.peek();
                     ops.pop();
 
                     values.push(applyOp(val1, val2, op));
@@ -119,22 +109,22 @@ public class CalculationController {
             else
             {
 
-                while(!ops.empty() && precedence(ops.top())
-                        >= precedence(tokens[i])){
-                    int val2 = values.top();
+                while(!ops.empty() && precedence(ops.peek())
+                        >= precedence(tokens.charAt(i))){
+                    int val2 = values.peek();
                     values.pop();
 
-                    int val1 = values.top();
+                    int val1 = values.peek();
                     values.pop();
 
-                    char op = ops.top();
+                    char op = ops.peek();
                     ops.pop();
 
                     values.push(applyOp(val1, val2, op));
                 }
 
                 // Push current token to 'ops'.
-                ops.push(tokens[i]);
+                ops.push(tokens.charAt(i));
             }
         }
 
@@ -142,44 +132,44 @@ public class CalculationController {
             int val2 = values.peek();
             values.pop();
 
-            int val1 = values.top();
+            int val1 = values.peek();
             values.pop();
 
-            char op = ops.top();
+            char op = ops.peek();
             ops.pop();
 
             values.push(applyOp(val1, val2, op));
         }
 
         // Top of 'values' contains result, return it.
-        return values.top();
+        return values.peek();
     }
 
-    int applyOpComplex(int a, int b, string op) {
-        for (int i = 0; i < myOperations.size(); i++) {
-            string oper = myOperations[i];
-            if (myOperations[i].length() > 1) {
-                stringstream ss(oper);
-                vector <string> words;
-                string word;
-                while (ss >> word) {
-                    words.push_back(word);
+    int applyOpComplex(int a, int b, String op) {
+        for (int i = 0; i < AddCustomController.myOperations.size(); i++) {
+            String oper = AddCustomController.myOperations.get(i);
+            if (oper.length() > 1) {
+                Scanner sc = new Scanner(oper);
+                ArrayList<String> words = new ArrayList<>();
+                while (sc.hasNext()) {
+                    words.add(sc.next());
                 }
-                oper = words[1];
+                oper = words.get(1);
 
-                if (op == oper) {
-                    string expression = findAndReplaceAll(operationValues[i], words[0], to_string(a));
-                    expression = findAndReplaceAll(expression, words[2], to_string(b));
+                if (op.equals(oper)) {
+                    String expression = AddCustomController.operationValues.get(i).replaceAll(words.get(0), Integer.toString(a));
+                    expression = expression.replaceAll(words.get(2), Integer.toString(b));
                     return evaluateSimple(expression);
                 }
             }
             else {
-                if (op == oper) {
-                    return applyOp(a, b, op[0]);
+                if (op.equals(oper)) {
+                    return applyOp(a, b, op.charAt(0));
                 }
             }
 
         }
+        return 0;
     }
 
     int evaluate(String tokens){
@@ -193,10 +183,10 @@ public class CalculationController {
                 ops.push("(");
             }
 
-            else if(isdigit(tokens.charAt(i))){
+            else if(Character.isDigit(tokens.charAt(i))){
                 int val = 0;
 
-                while(i < tokens.length() && isdigit(tokens.charAt(i)))
+                while(i < tokens.length() && Character.isDigit(tokens.charAt(i)))
                 {
                     val = (val*10) + (tokens.charAt(i)-'0');
                     i++;
@@ -213,7 +203,7 @@ public class CalculationController {
 
             else if(tokens.charAt(i) == ')')
             {
-                while(!ops.empty() && ops.peek() != "(")
+                while(!ops.empty() && !ops.peek().equals("("))
                 {
                     int val2 = values.peek();
                     values.pop();

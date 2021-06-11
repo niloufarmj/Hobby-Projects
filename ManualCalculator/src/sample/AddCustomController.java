@@ -11,8 +11,8 @@ import java.util.Scanner;
 public class AddCustomController {
 
     public TextField command_field;
-    public static ArrayList <String> myOperations;
-    public static ArrayList <String> operationValues;
+    public static ArrayList <String> myOperations = new ArrayList<>();
+    public static ArrayList <String> operationValues = new ArrayList<>();
 
     public void add_command(MouseEvent mouseEvent) throws IOException {
         String command = command_field.getText();
