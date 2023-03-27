@@ -10,6 +10,14 @@
 /Project Boost/ProjectBoost/[Ll]ogs/
 /Project Boost/ProjectBoost/[Uu]ser[Ss]ettings/
 
+/rollaball/Rollaball/[Ll]ibrary/
+/rollaball/Rollaball/[Tt]emp/
+/rollaball/Rollaball/[Oo]bj/
+/rollaball/Rollaball/[Bb]uild/
+/rollaball/Rollaball/[Bb]uilds/
+/rollaball/Rollaball/[Ll]ogs/
+/rollaball/Rollaball/[Uu]ser[Ss]ettings/
+
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data
 /[Mm]emoryCaptures/
@@ -70,3 +78,10 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /Project Boost/ProjectBoost/[Aa]ssets/[Ss]treamingAssets/aa.meta
 /Project Boost/ProjectBoost/[Aa]ssets/[Ss]treamingAssets/aa/*
+
+# Packed Addressables
+/rollaball/Rollaball/[Aa]ssets/[Aa]ddressable[Aa]ssets[Dd]ata/*/*.bin*
+
+# Temporary auto-generated Android Assets
+/rollaball/Rollaball/[Aa]ssets/[Ss]treamingAssets/aa.meta
+/rollaball/Rollaball/[Aa]ssets/[Ss]treamingAssets/aa/*
