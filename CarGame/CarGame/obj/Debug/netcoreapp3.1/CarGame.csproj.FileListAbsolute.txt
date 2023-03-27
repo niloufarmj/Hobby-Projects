@@ -1,0 +1,16 @@
+D:\csharp\CarGame\CarGame\bin\Debug\netcoreapp3.1\CarGame.exe
+D:\csharp\CarGame\CarGame\bin\Debug\netcoreapp3.1\CarGame.deps.json
+D:\csharp\CarGame\CarGame\bin\Debug\netcoreapp3.1\CarGame.runtimeconfig.json
+D:\csharp\CarGame\CarGame\bin\Debug\netcoreapp3.1\CarGame.runtimeconfig.dev.json
+D:\csharp\CarGame\CarGame\bin\Debug\netcoreapp3.1\CarGame.dll
+D:\csharp\CarGame\CarGame\bin\Debug\netcoreapp3.1\CarGame.pdb
+D:\csharp\CarGame\CarGame\obj\Debug\netcoreapp3.1\CarGame.csprojAssemblyReference.cache
+D:\csharp\CarGame\CarGame\obj\Debug\netcoreapp3.1\CarGame.Form1.resources
+D:\csharp\CarGame\CarGame\obj\Debug\netcoreapp3.1\CarGame.Properties.Resources.resources
+D:\csharp\CarGame\CarGame\obj\Debug\netcoreapp3.1\CarGame.csproj.GenerateResource.cache
+D:\csharp\CarGame\CarGame\obj\Debug\netcoreapp3.1\CarGame.AssemblyInfoInputs.cache
+D:\csharp\CarGame\CarGame\obj\Debug\netcoreapp3.1\CarGame.AssemblyInfo.cs
+D:\csharp\CarGame\CarGame\obj\Debug\netcoreapp3.1\CarGame.csproj.CoreCompileInputs.cache
+D:\csharp\CarGame\CarGame\obj\Debug\netcoreapp3.1\CarGame.dll
+D:\csharp\CarGame\CarGame\obj\Debug\netcoreapp3.1\CarGame.pdb
+D:\csharp\CarGame\CarGame\obj\Debug\netcoreapp3.1\CarGame.genruntimeconfig.cache

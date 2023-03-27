@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane prefHeight="360.0" prefWidth="275.0" style="-fx-background-color: #29292b;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.PanelController">
+   <children>
+      <Button layoutX="56.0" layoutY="158.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="166.0" style="-fx-background-color: #f94c85;" text="Add Custom Command" textFill="WHITE">
+         <font>
+            <Font name="Cooper Black" size="11.0" />
+         </font></Button>
+      <Button layoutX="59.0" layoutY="162.0" mnemonicParsing="false" onMouseClicked="#add" prefHeight="35.0" prefWidth="159.0" style="-fx-background-color: #504e54;" text="Add Custom Command" textFill="WHITE">
+         <font>
+            <Font name="Cooper Black" size="11.0" />
+         </font>
+      </Button>
+      <Button layoutX="57.0" layoutY="218.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="166.0" style="-fx-background-color: #f94c85;" text="Add Custom Command" textFill="WHITE">
+         <font>
+            <Font name="Cooper Black" size="11.0" />
+         </font>
+      </Button>
+      <Button layoutX="57.0" layoutY="277.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="166.0" style="-fx-background-color: #f94c85;" text="Add Custom Command" textFill="WHITE">
+         <font>
+            <Font name="Cooper Black" size="11.0" />
+         </font>
+      </Button>
+      <Button layoutX="61.0" layoutY="222.0" mnemonicParsing="false" onMouseClicked="#cal" prefHeight="35.0" prefWidth="159.0" style="-fx-background-color: #504e54;" text="Calculate" textFill="WHITE">
+         <font>
+            <Font name="Cooper Black" size="11.0" />
+         </font>
+      </Button>
+      <Button layoutX="61.0" layoutY="281.0" mnemonicParsing="false" onMouseClicked="#exit" prefHeight="35.0" prefWidth="159.0" style="-fx-background-color: #504e54;" text="Exit" textFill="WHITE">
+         <font>
+            <Font name="Cooper Black" size="11.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="88.0" fitWidth="87.0" layoutX="97.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="file:/D:/csharp/ManualCalculator/unnamed.png" />
+         </image>
+      </ImageView>
+   </children>
+</Pane>

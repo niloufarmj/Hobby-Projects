@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane prefHeight="360.0" prefWidth="275.0" style="-fx-background-color: #29292b;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.AddCustomController">
+   <children>
+      <Button layoutX="58.0" layoutY="273.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="166.0" style="-fx-background-color: #f94c85;" text="Add Custom Command" textFill="WHITE">
+         <font>
+            <Font name="Cooper Black" size="11.0" />
+         </font>
+      </Button>
+      <Button layoutX="61.0" layoutY="277.0" mnemonicParsing="false" onMouseClicked="#add_command" prefHeight="35.0" prefWidth="159.0" style="-fx-background-color: #434146;" text="Add Custom Command" textFill="WHITE">
+         <font>
+            <Font name="Cooper Black" size="11.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="88.0" fitWidth="87.0" layoutX="97.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="file:/D:/csharp/ManualCalculator/unnamed.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="command_field" layoutX="38.0" layoutY="180.0" prefHeight="43.0" prefWidth="206.0" promptText="your custom command here" style="-fx-background-color: #56535a;" />
+   </children>
+</Pane>

@@ -1,0 +1,15 @@
+C:\Users\Asus\source\repos\Test\Test\bin\Debug\Test.exe.config
+C:\Users\Asus\source\repos\Test\Test\bin\Debug\Test.exe
+C:\Users\Asus\source\repos\Test\Test\bin\Debug\Test.pdb
+C:\Users\Asus\source\repos\Test\Test\bin\Debug\Interop.WMPLib.dll
+C:\Users\Asus\source\repos\Test\Test\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\Asus\source\repos\Test\Test\obj\Debug\Test.csprojAssemblyReference.cache
+C:\Users\Asus\source\repos\Test\Test\obj\Debug\Interop.WMPLib.dll
+C:\Users\Asus\source\repos\Test\Test\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\Asus\source\repos\Test\Test\obj\Debug\Test.csproj.ResolveComReference.cache
+C:\Users\Asus\source\repos\Test\Test\obj\Debug\Test.Form1.resources
+C:\Users\Asus\source\repos\Test\Test\obj\Debug\Test.Properties.Resources.resources
+C:\Users\Asus\source\repos\Test\Test\obj\Debug\Test.csproj.GenerateResource.cache
+C:\Users\Asus\source\repos\Test\Test\obj\Debug\Test.csproj.CoreCompileInputs.cache
+C:\Users\Asus\source\repos\Test\Test\obj\Debug\Test.exe
+C:\Users\Asus\source\repos\Test\Test\obj\Debug\Test.pdb

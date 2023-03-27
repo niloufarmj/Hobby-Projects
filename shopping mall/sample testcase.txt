@@ -1,0 +1,13 @@
+admin admin
+p1 p1
+p2 p2
+c1 c1 1
+c2 c2 3
+0.04 mihan 10000 1.2.3
+0.07 tak 15000 1.2.3
+0.05 iran 150000 charm 38
+0.09 iran 100000 nakh M
+0.01 samsung 8000000 2019 5
+1 lg 10000000 2018 42
+daste1 daste2 headset 
+0.3 sony 3000000 2018
