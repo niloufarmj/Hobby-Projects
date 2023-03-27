@@ -2,13 +2,13 @@
 #
 # Get latest from https://github.com/github/gitignore/blob/main/Unity.gitignore
 #
-/[Ll]ibrary/
-/[Tt]emp/
-/[Oo]bj/
-/[Bb]uild/
-/[Bb]uilds/
-/[Ll]ogs/
-/[Uu]ser[Ss]ettings/
+/Project Boost/ProjectBoost/[Ll]ibrary/
+/Project Boost/ProjectBoost/[Tt]emp/
+/Project Boost/ProjectBoost/[Oo]bj/
+/Project Boost/ProjectBoost/[Bb]uild/
+/Project Boost/ProjectBoost/[Bb]uilds/
+/Project Boost/ProjectBoost/[Ll]ogs/
+/Project Boost/ProjectBoost/[Uu]ser[Ss]ettings/
 
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data
@@ -65,8 +65,8 @@ sysinfo.txt
 crashlytics-build.properties
 
 # Packed Addressables
-/[Aa]ssets/[Aa]ddressable[Aa]ssets[Dd]ata/*/*.bin*
+/Project Boost/ProjectBoost/[Aa]ssets/[Aa]ddressable[Aa]ssets[Dd]ata/*/*.bin*
 
 # Temporary auto-generated Android Assets
-/[Aa]ssets/[Ss]treamingAssets/aa.meta
-/[Aa]ssets/[Ss]treamingAssets/aa/*
+/Project Boost/ProjectBoost/[Aa]ssets/[Ss]treamingAssets/aa.meta
+/Project Boost/ProjectBoost/[Aa]ssets/[Ss]treamingAssets/aa/*
