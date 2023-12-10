@@ -7,6 +7,8 @@
 4. [Project Boost](#4-project-boost)
 5. [Desk Reservation System (Divar)](#5-desk-reservation-system-divar)
 6. [Shopping Mall Management System](#6-shopping-mall-management-system)
+7. [Dice Kid](#7-dice-kid)
+8. [Roll a Ball](#8-roll-a-ball)
 
 ## 1. Car Game
 This is a simple car game implemented using C# and Windows Forms in .NET Framework. The game involves navigating a car through a series of obstacles while collecting coins.
@@ -20,7 +22,7 @@ This is a simple car game implemented using C# and Windows Forms in .NET Framewo
 
 https://github.com/niloufarmj/Hobby-Projects/assets/46811379/5703577b-9b37-4ca7-8c5e-126eebf8d3b4
 
-## 2. ِDigital Clock
+## 2. Digital Clock
 This is a simple digital clock implemented using C# and Windows Forms in .NET Framework. It shows current time and date
 
 
@@ -88,4 +90,41 @@ This is a Java program that simulates a shopping mall management system. It allo
 Upon running the program, you will be prompted with a menu displaying various options. Enter the corresponding number to select an option and proceed with the desired action. The menu allows you to sign up or log in as an admin, producer, carrier, or client, and perform tasks specific to each role.
 
 Please note that this program is a simulation and does not have a graphical user interface (GUI). All interactions and outputs are performed through the command line.
+
+
+## 7. Dice Kid
+This is a game implemented for Game Jam 2022 using C# and Unity Engine. 
+Only phase 1 of the game is completed. 
+phase 2 including level generation and other mechanics will be added later. 
+phase 3 including exported executable game will be added later.
+
+### Features
+1. Control Dice Mother using 'A', 'D', 'W' keys to go left, right and jump, respectively.
+2. By colliding Dice Kids, Dice Mother collects them.
+3. Each kid can be dropped using 'space' key. Then a new ability will be added, randomly, according to the random dice number of that kid.
+4. By getting near an enemy, it will start following you.
+5. By colliding an enemy, you will lose a kid, and if there are no kids you will lose a heart.
+6. You have to reach the end line with maximum number of kids. Your Score will be calculated by that.
+
+   
+
+
+https://github.com/niloufarmj/Hobby-Projects/assets/46811379/2c9aedda-a6db-407e-a9f7-a14aebf6a69d
+
+
+## 8. Roll a Ball
+
+This is the Roll a Ball project developed in Unity to get started with the engine. Roll a Ball is a simple 3D game where the player controls a ball and tries to collect all the pickups scattered throughout the level. The goal is to navigate the ball using keyboard input or touch controls and avoid obstacles while collecting the pickups.
+
+### Features
+
+1. Simple and intuitive controls.
+2. Realistic physics simulation for the ball movement.
+3. Collectible pickups with score tracking.
+4. Win condition when all pickups are collected.
+
+
+
+https://github.com/niloufarmj/Hobby-Projects/assets/46811379/85f35274-d89a-4c89-b08f-c7a1be2036a7
+
 
