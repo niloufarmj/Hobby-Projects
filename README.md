@@ -89,3 +89,23 @@ Upon running the program, you will be prompted with a menu displaying various op
 
 Please note that this program is a simulation and does not have a graphical user interface (GUI). All interactions and outputs are performed through the command line.
 
+
+## 7. Dice Kid
+This is a game implemented for Game Jam 2022 using C# and Unity Engine. 
+Only phase 1 of the game is completed. 
+phase 2 including level generation and other mechanics will be added later. 
+phase 3 including exported executable game will be added later.
+
+### Features
+1. Control Dice Mother using 'A', 'D', 'W' keys to go left, right and jump, respectively.
+2. By colliding Dice Kids, Dice Mother collects them.
+3. Each kid can be dropped using 'space' key.
+4. By getting near an enemy, it will start following you.
+5. By colliding an enemy, you will lose a kid, and if there are no kids you will lose a heart.
+6. You have to reach the end line with maximum number of kids. Your Score will be calculated by that.
+
+   
+
+
+https://github.com/niloufarmj/Hobby-Projects/assets/46811379/2c9aedda-a6db-407e-a9f7-a14aebf6a69d
+
