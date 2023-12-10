@@ -54,5 +54,31 @@ The code reads input from the user to perform various actions. The available com
 4. desk_status <desk_id> <start_time>: Displays the status of a desk with the specified ID at the given start time.
 
 
+## 6. Shopping Mall Management System
+This is a Java program that simulates a shopping mall management system. It allows users to sign up or log in as administrators, producers, carriers, or clients, and perform various actions within the shopping mall.
 
+### Features
+1. Admin Actions
+  - Add producers and carriers
+  - View and edit producer and carrier information
+  - Apply discounts to all products
+
+2. Producer Actions
+  - Add different types of products (Food, Wearing, Device)
+  - Specify product details such as company name, volume, price, etc.
+
+3. Carrier Actions
+  - Set the type of vehicle (motorcycle, pickup, car)
+  - Perform carrier-related tasks
+
+4. Client Actions
+  - Sign up as a client
+  - Log in as a client
+  - Perform client-specific tasks
+
+### Usage
+
+Upon running the program, you will be prompted with a menu displaying various options. Enter the corresponding number to select an option and proceed with the desired action. The menu allows you to sign up or log in as an admin, producer, carrier, or client, and perform tasks specific to each role.
+
+Please note that this program is a simulation and does not have a graphical user interface (GUI). All interactions and outputs are performed through the command line.
 
