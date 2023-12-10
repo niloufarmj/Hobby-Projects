@@ -8,6 +8,7 @@
 5. [Desk Reservation System (Divar)](#5-desk-reservation-system-divar)
 6. [Shopping Mall Management System](#6-shopping-mall-management-system)
 7. [Dice Kid](#7-dice-kid)
+8. [Roll a Ball](#8-roll-a-ball)
 
 ## 1. Car Game
 This is a simple car game implemented using C# and Windows Forms in .NET Framework. The game involves navigating a car through a series of obstacles while collecting coins.
@@ -109,4 +110,21 @@ phase 3 including exported executable game will be added later.
 
 
 https://github.com/niloufarmj/Hobby-Projects/assets/46811379/2c9aedda-a6db-407e-a9f7-a14aebf6a69d
+
+
+## 8. Roll a Ball
+
+This is the Roll a Ball project developed in Unity to get started with the engine. Roll a Ball is a simple 3D game where the player controls a ball and tries to collect all the pickups scattered throughout the level. The goal is to navigate the ball using keyboard input or touch controls and avoid obstacles while collecting the pickups.
+
+### Features
+
+1. Simple and intuitive controls.
+2. Realistic physics simulation for the ball movement.
+3. Collectible pickups with score tracking.
+4. Win condition when all pickups are collected.
+
+
+
+https://github.com/niloufarmj/Hobby-Projects/assets/46811379/85f35274-d89a-4c89-b08f-c7a1be2036a7
+
 
