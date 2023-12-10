@@ -33,9 +33,9 @@ https://github.com/niloufarmj/Hobby-Projects/assets/46811379/087d7a0b-4a4e-426f-
 This is a starter project to learn game develoment in Unity Engine, implemented with C#.
 
 ### Features:
-1. Control the Jet pressing space to fly and right and left arrow keys to move right and left in respect.
-2. If the Jet collides with pink objects it loses.
-3. If the Jet collides with green objects it proceeds to next level.
+1. Control the Rocket pressing space to fly and right and left arrow keys to move right and left in respect.
+2. If the Rocket collides with pink objects it loses.
+3. If the Rocket collides with green objects it proceeds to next level.
 
 
 https://github.com/niloufarmj/Hobby-Projects/assets/46811379/92cc7912-5458-41c9-8145-bd2b1ca8b9dd
@@ -58,20 +58,20 @@ The code reads input from the user to perform various actions. The available com
 This is a Java program that simulates a shopping mall management system. It allows users to sign up or log in as administrators, producers, carriers, or clients, and perform various actions within the shopping mall.
 
 ### Features
-1. Admin Actions
+1. `Admin Actions`
   - Add producers and carriers
   - View and edit producer and carrier information
   - Apply discounts to all products
 
-2. Producer Actions
+2. `Producer Actions`
   - Add different types of products (Food, Wearing, Device)
   - Specify product details such as company name, volume, price, etc.
 
-3. Carrier Actions
+3. `Carrier Actions`
   - Set the type of vehicle (motorcycle, pickup, car)
   - Perform carrier-related tasks
 
-4. Client Actions
+4. `Client Actions`
   - Sign up as a client
   - Log in as a client
   - Perform client-specific tasks
