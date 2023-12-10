@@ -1,5 +1,12 @@
 # Hobby-Projects
 
+## Table of Contents
+1. [Car Game](#1-car-game)
+2. [Digital Clock](#2-digital-clock)
+3. [Note App](#3-note-app)
+4. [Project Boost](#4-project-boost)
+5. [Desk Reservation System (Divar)](#5-desk-reservation-system-divar)
+6. [Shopping Mall Management System](#6-shopping-mall-management-system)
 
 ## 1. Car Game
 This is a simple car game implemented using C# and Windows Forms in .NET Framework. The game involves navigating a car through a series of obstacles while collecting coins.
