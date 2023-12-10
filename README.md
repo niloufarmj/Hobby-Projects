@@ -7,6 +7,7 @@
 4. [Project Boost](#4-project-boost)
 5. [Desk Reservation System (Divar)](#5-desk-reservation-system-divar)
 6. [Shopping Mall Management System](#6-shopping-mall-management-system)
+7. [Dice Kid](#7-dice-kid)
 
 ## 1. Car Game
 This is a simple car game implemented using C# and Windows Forms in .NET Framework. The game involves navigating a car through a series of obstacles while collecting coins.
@@ -20,7 +21,7 @@ This is a simple car game implemented using C# and Windows Forms in .NET Framewo
 
 https://github.com/niloufarmj/Hobby-Projects/assets/46811379/5703577b-9b37-4ca7-8c5e-126eebf8d3b4
 
-## 2. ِDigital Clock
+## 2. Digital Clock
 This is a simple digital clock implemented using C# and Windows Forms in .NET Framework. It shows current time and date
 
 
