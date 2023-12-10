@@ -100,7 +100,7 @@ phase 3 including exported executable game will be added later.
 ### Features
 1. Control Dice Mother using 'A', 'D', 'W' keys to go left, right and jump, respectively.
 2. By colliding Dice Kids, Dice Mother collects them.
-3. Each kid can be dropped using 'space' key.
+3. Each kid can be dropped using 'space' key. Then a new ability will be added, randomly, according to the random dice number of that kid.
 4. By getting near an enemy, it will start following you.
 5. By colliding an enemy, you will lose a kid, and if there are no kids you will lose a heart.
 6. You have to reach the end line with maximum number of kids. Your Score will be calculated by that.
