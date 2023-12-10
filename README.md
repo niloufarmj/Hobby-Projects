@@ -41,5 +41,18 @@ This is a starter project to learn game develoment in Unity Engine, implemented 
 https://github.com/niloufarmj/Hobby-Projects/assets/46811379/92cc7912-5458-41c9-8145-bd2b1ca8b9dd
 
 
+## 5. Desk Reservation System (Divar)
+
+The Java code implements a desk reservation system for a workspace with multiple floors and desks. Users can request and reserve desks based on specific criteria such as availability, features, and time intervals. The code can be further extended and customized to meet specific requirements and integrate with other systems or interfaces.
+
+### Features:
+The code reads input from the user to perform various actions. The available commands are as follows:
+
+1. `request_desk <user> <required_type> <start_time> <duration>`: Requests a desk for a user with the specified requirements (required type, start time, and duration).
+2. `reserve_desk <user> <reserve_start_time> <reserve_duration> <feature_code>`: Reserves a desk for a user with the specified features, start time, and duration.
+3. `reserve_multiple_desks <user> <num_of_desks> <start_time> <duration>`: Reserves multiple desks for a user with the specified number of desks, start time, and duration.
+4. desk_status <desk_id> <start_time>: Displays the status of a desk with the specified ID at the given start time.
+
+
 
 
