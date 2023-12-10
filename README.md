@@ -20,4 +20,26 @@ This is a simple digital clock implemented using C# and Windows Forms in .NET Fr
 
 https://github.com/niloufarmj/Hobby-Projects/assets/46811379/d0b48747-c403-4a2b-a7fb-fc6294a60cd4
 
+## 3. Note App
+It's a simple note app saving notes in a list. You can read notes or delete them. 
+
+
+
+
+https://github.com/niloufarmj/Hobby-Projects/assets/46811379/087d7a0b-4a4e-426f-a546-95c33691d232
+
+
+## 4. Project Boost
+This is a starter project to learn game develoment in Unity Engine, implemented with C#.
+
+### Features:
+1. Control the Jet pressing space to fly and right and left arrow keys to move right and left in respect.
+2. If the Jet collides with pink objects it loses.
+3. If the Jet collides with green objects it proceeds to next level.
+
+
+https://github.com/niloufarmj/Hobby-Projects/assets/46811379/92cc7912-5458-41c9-8145-bd2b1ca8b9dd
+
+
+
 
