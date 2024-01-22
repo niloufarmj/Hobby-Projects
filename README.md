@@ -9,6 +9,7 @@
 6. [Shopping Mall Management System](#6-shopping-mall-management-system)
 7. [Dice Kid](#7-dice-kid)
 8. [Roll a Ball](#8-roll-a-ball)
+9. [Angry Birds](#9-angry-birds)
 
 ## 1. Car Game
 This is a simple car game implemented using C# and Windows Forms in .NET Framework. The game involves navigating a car through a series of obstacles while collecting coins.
@@ -126,5 +127,19 @@ This is the Roll a Ball project developed in Unity to get started with the engin
 
 
 https://github.com/niloufarmj/Hobby-Projects/assets/46811379/85f35274-d89a-4c89-b08f-c7a1be2036a7
+
+
+## 9. Angry Birds
+
+This is the Angry Birds project developed in Unity to get started with the engine. 
+
+### Features
+
+1. Visual Effects
+
+
+https://github.com/niloufarmj/Hobby-Projects/assets/46811379/3d151956-7749-415b-b858-5d581b986fb0
+
+
 
 
