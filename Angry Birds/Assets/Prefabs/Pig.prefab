@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2015976580928290831}
   - component: {fileID: 8487866542224724344}
   - component: {fileID: 903591487042561677}
+  - component: {fileID: -1167986352469565714}
   m_Layer: 0
   m_Name: Pig
   m_TagString: Untagged
@@ -101,3 +102,24 @@ CircleCollider2D:
   m_Offset: {x: -0.0053038597, y: -0.037127554}
   serializedVersion: 2
   m_Radius: 0.47689247
+--- !u!50 &-1167986352469565714
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8961185074482448798}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
