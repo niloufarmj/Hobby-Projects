@@ -47,9 +47,4 @@ public class PanchitoMove : MonoBehaviour
         rb.velocity = -dis.normalized * maxVal * dis.magnitude / springRange;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
